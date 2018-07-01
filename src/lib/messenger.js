@@ -10,7 +10,7 @@ export default class Messenger{
     constructor(){
         if(process.env.NODE_ENV === "production"){
             this.bot = new TelegramBot(config.telegram.token, {
-                webhook: {
+                webHook: {
                     port: config.telegram.port,
                     host: config.telegram.host
                 }
